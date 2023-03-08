@@ -7,7 +7,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>SPP SMANIC</title>
+        <title>SPP SMK 1 BOGOR</title>
         <link rel="stylesheet" href="{{asset('assets/css2.css')}}">
         <link rel="stylesheet" href="{{asset('assets/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/fontawesome-free-5.15.3-web/css/all.min.css')}}">
@@ -39,7 +39,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ 'SPP SMA NEGRI 1 CIAWI' }}
+                    {{ 'SPP SMK 1 BOGOR' }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
