@@ -7,7 +7,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Spp</title>
+        <title>SPP SMANIC</title>
         <link rel="stylesheet" href="{{asset('assets/css2.css')}}">
         <link rel="stylesheet" href="{{asset('assets/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/fontawesome-free-5.15.3-web/css/all.min.css')}}">
