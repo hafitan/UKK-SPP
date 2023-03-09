@@ -52,7 +52,7 @@
                         <td>{{ $pembayaran->bulan_dibayar }}</td>
                         <td>{{ $pembayaran->tahun_dibayar }}</td>
                         <td>{{ substr($pembayaran->tahun,0,4) }} - {{ substr($pembayaran->tahun,-4,4) }}</td>
-                        <td>{{ number_format($pembayaran->jumlah_bayar) }}</td>
+                        <td>Rp.{{ number_format($pembayaran->jumlah_bayar) }}</td>
                         <td><span style="display:none">dibuat pada : {{ $pembayaran->created_at }}</span>
                             <a href="{{ route('pembayaran.show', $pembayaran->nisn) }}" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
                             {{-- <form onsubmit="return confirm('')" action="" method="post">

@@ -72,6 +72,9 @@ class PembayaranController extends Controller
             $siswa = Siswa::where('nisn', '=', $request->nisn)->first();
             $spp = Spp::where('id', '=', $siswa->id_spp)->first();
             $pembayaran = Pembayaran::where('nisn', '=', $siswa->nisn)->get();
+            // $cek = Pembayaran::where('nisn', $request->nisn)->count();
+            // $max = 36 - $cek;
+            // $chek = $siswa->id_masuk - $cek;
 
             if($pembayaran->isEmpty()){
                 $bln = 6;
@@ -99,6 +102,10 @@ class PembayaranController extends Controller
             if($request->jumlah_bayar < $spp->nominal){
                 return back()->with('tjumlah_bayar', 'Uang yang dimasukan tidak sesuai');
             }
+
+            // if($max == 0){
+            //     return back()->with('error', 'sudah lunas');
+            // }
 
             $idp = Petugas::where('email', auth()->user()->email)->first()->id;
 

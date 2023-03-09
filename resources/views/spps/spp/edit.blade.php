@@ -1,13 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <div class="card-body">
-        <h3>Edit SPP</h3>
-        <a href="{{ route('spp.index') }}" class="btn btn-primary">Back</a>
-            @if (Session::get('error'))
-                <div class="alert alert-danger mt-2 mb-2" role="alert">
-                    {{ Session::get('error') }}
-                </div>
-            @endif
         <div class="form">
             <form action="{{ route('spp.update', $spp->id) }}" method="post">
                 @csrf

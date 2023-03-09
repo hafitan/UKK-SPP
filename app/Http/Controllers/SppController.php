@@ -43,7 +43,7 @@ class SppController extends Controller
         ]);
 
         $data = $request->all();
-        $next = $request->tahun + 2;
+        $next = $request->tahun + 3;
         $data['tahun'] = $request->tahun . $next;
 
         if($request->tahun < 2000){
@@ -102,7 +102,7 @@ class SppController extends Controller
         ]);
 
         $data = $request->all();
-        $next = $request->tahun + 2;
+        $next = $request->tahun + 3;
         $data['tahun'] = $request->tahun . $next;
 
         if($request->tahun < 2000){

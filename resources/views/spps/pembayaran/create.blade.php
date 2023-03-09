@@ -81,10 +81,10 @@
                             </div>
                         @endif
                     </div>
-                    <div class="form-group d-none" id="kem">
+                    {{-- <div class="form-group d-none" id="kem">
                         <label for="kemabalian">kembalian</label>
                         <input type="text" id="kembalian" class="form-control" readonly name="kembalian">
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <button class="btn btn-primary" id="buttonSubmit" type="submit">Simpan</button>
                     </div>

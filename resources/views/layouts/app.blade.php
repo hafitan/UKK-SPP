@@ -73,9 +73,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('pembayaran.index') }}" class="nav-link">Pembayaran</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('pembayaran.history') }}" class="nav-link">history</a>
-                                </li>
+                                </li> --}}
                             @elseif (auth()->user()->level == 'siswa')
                                 <li class="nav-item">
                                     <a href="{{ route('pembayaran.history') }}" class="nav-link">history</a>

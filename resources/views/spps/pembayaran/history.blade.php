@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
     @if(auth()->user()->level == 'siswa')
-        <h3>Halaman History Siswa</h3>
+        <div class="card-header text-center">
+            {{-- <i class="fas fa-user"></i> --}}
+            <i>SPP SMK 1 BOGOR</i>
+        </div>
         <div class="card-body">
             <div class="div float-right">
                 {{-- @dd($info) --}}
@@ -52,6 +55,10 @@
                         @endforelse
                     </tbody>
                 </table>
+            </div>
+            <div class="card-footer text-center">
+                {{-- <i class="fas fa-user"></i> --}}
+                <i>SPP SMK 1 BOGOR</i>
             </div>
         </div>
     @endif

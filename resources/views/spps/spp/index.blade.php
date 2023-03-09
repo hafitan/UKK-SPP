@@ -28,6 +28,7 @@
                     <td>No</td>
                     <td>Nominal</td>
                     <td>Tahun</td>
+                    <td>total bulan</td>
                     <td>Action</td>
                 </tr>
             </thead>
@@ -40,6 +41,7 @@
                         <td>{{ $i++ }}</td>
                         <td>{{ $spp->nominal }}</td>
                         <td>{{ substr($spp->tahun, 0, 4) }} - {{ substr($spp->tahun, -4, 4) }}</td>
+                        <td>{{ $spp->total_bulan }}</td>
                         <td>
                             <form onsubmit="return confirm('yakin hapus {{ substr($spp->tahun,0,4) }}')" action="{{ route('spp.destroy', $spp->id) }}" method="post">
                                 @csrf
@@ -100,6 +102,9 @@
                                 </div>
                                 @endif
                             </div>
+                            {{-- <div class="form-group">
+                                <input type="number" name="total_bulan" id="" class="form-control">
+                            </div> --}}
                             <div class="form-group">
                                 <button class="btn btn-primary">submit</button>
                             </div>

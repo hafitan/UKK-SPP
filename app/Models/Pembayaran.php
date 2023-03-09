@@ -30,4 +30,9 @@ class Pembayaran extends Model
     {
         return $this->belongsTo(Spp::class, 'id_spp');
     }
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'id_kelas');
+    }
 }

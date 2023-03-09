@@ -52,19 +52,23 @@ class SiswaController extends Controller
             'alamat' => 'required',
             'no_telp' => 'required',
             'id_spp' => 'required',
+            // 'id_masuk' => $request->tahun_masuk
         ]);
 
+        // dd($request);
         $data = $request->all();
-        // dd($data);
         $data['level'] = 'siswa';
         $data['email'] = $request->nis . '@gmail.com';
 
-        // if($data['nisn'] !== NULL){
-        //     return back()->with('error', 'nisn sudah terdaftar');
-        // }
-        // if($data['nis'] !== NULL){
-        //     return back()->with('error', 'nis sudah terdaftar');
-        // }
+        $nisn = Siswa::where('nisn', $request->nisn);
+        $nis = Siswa::where('nis', $request->nis);
+        // dd($nis);
+        if($nisn){
+            return back()->with('error', 'nisn sudah terdaftar');
+        }
+        if($nis){
+            return back()->with('error', 'nis sudah terdaftar');
+        }
         $save = Siswa::create($data);
 
         if($save){

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="card-header">
-        <h3>SPP</h3>
+    <div class="card-header text-center">
+        <i>SPP SMK 1 BOGOR</i>
     </div>
     <div class="card-body">
         <div class="div float-right">
@@ -57,8 +57,11 @@
         <div class="ml-15">
                 total : {{ $total }}
         </div>
-        <div class="div mt-2">
+        {{-- <div class="div mt-2">
             <a href="{{ route('pembayaran.index') }}" class="btn btn-primary">Back</a>
+        </div> --}}
+        <div class="card-footer text-center">
+            <i>SPP SMK 1 BOGOR</i>
         </div>
     </div>
     <script>
